@@ -10,7 +10,9 @@ module.exports = {
             {
                 test:    /\.js$/,
                 loader:  'babel-loader',
+                exclude: /node_modules/,
                 query:   {
+                    plugins: ['transform-class-properties', 'transform-decorators-legacy', 'transform-runtime'],
                     presets: ['stage-0', 'stage-3', 'es2015', 'react']
                 }
             }
